@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class UniqueCharacters {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input
+        System.out.print("Enter a string: ");
+        String str = scanner.nextLine();
+
+        // Remove spaces and convert to lowercase for case-insensitive comparison
+        str = str.replaceAll("\\s", "").toLowerCase();
+
+        // Create a HashSet to store unique characters
+        Set<Character> uniqueChars = new HashSet<>();
+
+        // Add unique characters to HashSet
+        for (char ch : str.toCharArray()) {
+            uniqueChars.add(ch);
+        }
+
+        // Output
+        System.out.print("Unique characters: ");
+        for (char ch : uniqueChars) {
+            System.out.print(ch + " ");
+        }
+    }
+}
