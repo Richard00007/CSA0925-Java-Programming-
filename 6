@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class NumberConversion {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input
+        System.out.print("Enter Decimal Number: ");
+        int decimal = scanner.nextInt();
+
+        // Conversion
+        String binary = Integer.toBinaryString(decimal);
+        String octal = Integer.toOctalString(decimal);
+
+        // Output
+        System.out.println("Binary Number = " + binary);
+        System.out.println("Octal Number = " + octal);
+    }
+}
+
