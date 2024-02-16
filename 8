@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class CommonElements {
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3, 4};
+        int[] array2 = {2, 4, 5, 6, 7};
+
+        // Find common elements
+        Set<Integer> set1 = new HashSet<>();
+        for (int num : array1) {
+            set1.add(num);
+        }
+
+        Set<Integer> commonElements = new HashSet<>();
+        for (int num : array2) {
+            if (set1.contains(num)) {
+                commonElements.add(num);
+            }
+        }
+
+        // Convert set to array
+        Integer[] commonArray = commonElements.toArray(new Integer[0]);
+
+        // Output
+        System.out.println("Common elements: " + Arrays.toString(commonArray));
+    }
+}
